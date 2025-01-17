@@ -16,3 +16,10 @@ def mean_1d(array:list) -> int or float:
         sum+=number
     avg = sum / len(array)
     return avg
+
+def max_1d(array:list) -> int or float:
+    max = array[0]
+    for number in array:
+        if number > max:
+            max = number
+    return max
