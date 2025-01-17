@@ -8,3 +8,11 @@ def prod_1d(array:list) -> int or float:
     for number in array:
         prod*= number
     return prod
+
+def mean_1d(array:list) -> int or float:
+    sum=0
+    avg = 0
+    for number in array:
+        sum+=number
+    avg = sum / len(array)
+    return avg
