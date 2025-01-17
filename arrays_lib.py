@@ -53,3 +53,11 @@ def mean_2d(array:list) -> int or float:
         sum+=array[i][j]
     avg = sum / len(array)
     return avg
+
+def max_1d(array:list) -> int or float:
+    max = array[0][0]
+    for i in range(0,len(array),1):
+        for j in range(0,len(array),1):
+            if array[i][j] > max:
+                max = array[i][j]
+    return max
