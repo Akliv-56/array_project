@@ -37,3 +37,10 @@ def sum_2d(array:list[list[int]]) -> int or float:
         for j in range(0,len(array),1):
             sum+=array[i][j]
     return sum
+
+def prod_2d(array:list) -> int or float:
+    prod = 1
+    for i in range(0,len(array),1):
+        for j in range(0,len(array),1):
+            prod*= array[i][j]
+    return prod
