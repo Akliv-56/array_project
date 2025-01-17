@@ -61,3 +61,11 @@ def max_1d(array:list) -> int or float:
             if array[i][j] > max:
                 max = array[i][j]
     return max
+
+def min_1d(array:list) -> int or float:
+    min= array[0][0]
+    for i in range(0,len(array),1):
+        for j in range(0,len(array),1):
+            if array[i][j] < min:
+                min = array[i][j]
+    return min
