@@ -23,3 +23,11 @@ def max_1d(array:list) -> int or float:
         if number > max:
             max = number
     return max
+
+def min_1d(array:list) -> int or float:
+    min= array[0]
+    for number in array:
+        if number<min:
+            min = number
+    return min
+
