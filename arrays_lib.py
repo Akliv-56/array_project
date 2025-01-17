@@ -31,3 +31,9 @@ def min_1d(array:list) -> int or float:
             min = number
     return min
 
+def sum_2d(array:list[list[int]]) -> int or float:
+    sum = 0
+    for i in range(0,len(array),1):
+        for j in range(0,len(array),1):
+            sum+=array[i][j]
+    return sum
