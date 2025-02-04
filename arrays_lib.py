@@ -69,3 +69,12 @@ def min_1d(array:list) -> int or float:
             if array[i][j] < min:
                 min = array[i][j]
     return min
+
+def diff_arrays(arr1:list[int or float], arr2:list[int or float]):
+    new_arr = []
+    if len(arr1) != len(arr2):
+        return None
+    else:
+        for i in range(0,len(arr1),1):
+            new_arr.append(arr1 - arr2)
+    return new_arr
