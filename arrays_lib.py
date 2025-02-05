@@ -69,3 +69,7 @@ def min_1d(array:list) -> int or float:
             if array[i][j] < min:
                 min = array[i][j]
     return min
+
+def prod_arrays(arr1:list[int],arr2:list[int]):
+    prod = arr1 * arr2
+    return prod
