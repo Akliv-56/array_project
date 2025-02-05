@@ -50,7 +50,7 @@ def mean_2d(array:list) -> int or float:
     avg = 0
     for i in range(0,len(array),1):
         for j in range(0,len(array),1):
-        sum+=array[i][j]
+            sum+=array[i][j]
     avg = sum / len(array)
     return avg
 
