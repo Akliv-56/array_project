@@ -1,4 +1,4 @@
-
+from logging import log_action
 def sum_1d(array:list) -> int or float:
     sum = 0
     for number in array:
@@ -55,7 +55,7 @@ def mean_2d(array:list) -> int or float:
     avg = sum / len(array)
     return avg
 
-def max_1d(array:list) -> int or float:
+def max_2d(array:list) -> int or float:
     max = array[0][0]
     for i in range(0,len(array),1):
         for j in range(0,len(array),1):
@@ -63,7 +63,9 @@ def max_1d(array:list) -> int or float:
                 max = array[i][j]
     return max
 
-def min_1d(array:list) -> int or float:
+def min_2d(array:list) -> int or float:
+    message = "вызвана функция min_1d"
+    log_action(message)
     min= array[0][0]
     for i in range(0,len(array),1):
         for j in range(0,len(array),1):
