@@ -74,6 +74,8 @@ def min_2d(array:list) -> int or float:
     return min
 
 def sum_arrays(arr1:list[int or float], arr2:list[int or float]):
+    message = "вызвана функция sum_arrays"
+    log_action(message)
     new_arr = []
     if len(arr1) != len(arr2):
         return None
@@ -83,6 +85,8 @@ def sum_arrays(arr1:list[int or float], arr2:list[int or float]):
     return new_arr
 
 def diff_arrays(arr1:list[int or float], arr2:list[int or float]):
+    message = "вызвана функция diff_arrays"
+    log_action(message)
     new_arr = []
     if len(arr1) != len(arr2):
         return None
@@ -92,6 +96,8 @@ def diff_arrays(arr1:list[int or float], arr2:list[int or float]):
     return new_arr
 
 def prod_arrays(arr1:list[int],arr2:list[int]):
+    message = "вызвана функция prod_arrays"
+    log_action(message)
     new_arr = []
     for i in range(0,len(arr1),1):
         prod = arr1[i] * arr2[i]
@@ -99,6 +105,8 @@ def prod_arrays(arr1:list[int],arr2:list[int]):
     return new_arr
 
 def compare_arrays(arr1:list[int],arr2:list[int]):
+    message = "вызвана функция compare_arrays"
+    log_action(message)
     arr1bigger = []
     arrequal = []
     arr2bigger = []
