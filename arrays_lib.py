@@ -92,5 +92,8 @@ def diff_arrays(arr1:list[int or float], arr2:list[int or float]):
     return new_arr
 
 def prod_arrays(arr1:list[int],arr2:list[int]):
-    prod = arr1 * arr2
-    return prod
+    new_arr = []
+    for i in range(0,len(arr1),1):
+        prod = arr1[i] * arr2[i]
+        new_arr.append(prod)
+    return new_arr
