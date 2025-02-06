@@ -97,3 +97,19 @@ def prod_arrays(arr1:list[int],arr2:list[int]):
         prod = arr1[i] * arr2[i]
         new_arr.append(prod)
     return new_arr
+
+def compare_arrays(arr1:list[int],arr2:list[int]):
+    arr1bigger = []
+    arrequal = []
+    arr2bigger = []
+    for i in range(0,len(arr1),1):
+        if arr1[i] > arr2[i]:
+            bigger = f"{arr1[i]} > {arr2[i]}"
+            arr1bigger.append(bigger)
+        if arr1[i] == arr2[i]:
+            equal = f"{arr1[i]} = {arr2[i]}"
+            arrequal.append(equal)
+        if arr1[i] < arr2[i]:
+            bigger2 = f"{arr1[i]} < {arr2[i]}"
+            arr1bigger.append(bigger2)
+    return arr1bigger, arrequal, arr2bigger
