@@ -81,7 +81,7 @@ def sum_arrays(arr1:list[int or float], arr2:list[int or float]):
         return None
     else:
         for i in range(0,len(arr1),1):
-            new_arr.append(arr1 + arr2)
+            new_arr.append(arr1[i] + arr2[i])
     return new_arr
 
 def diff_arrays(arr1:list[int or float], arr2:list[int or float]):
@@ -92,7 +92,7 @@ def diff_arrays(arr1:list[int or float], arr2:list[int or float]):
         return None
     else:
         for i in range(0,len(arr1),1):
-            new_arr.append(arr1 - arr2)
+            new_arr.append(arr1[i] - arr2[i])
     return new_arr
 
 def prod_arrays(arr1:list[int],arr2:list[int]):
