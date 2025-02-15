@@ -8,3 +8,10 @@ def upper_triangle(matrix:list[list[int or float]]):
             print(matrix[i][j], end=" ")
         print()
 upper_triangle([[1,2,3],[4,5,6],[7,8,9]])
+
+def lower_triangle(matrix:list[list[int or float]]):
+    for i in range(0, len(matrix),1):
+        for j in range(0,i+1,1):
+            print(matrix[i][j],end=" ")
+        print()
+lower_triangle([[1,2,3],[4,5,6],[7,8,9]])
