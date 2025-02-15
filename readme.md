@@ -116,3 +116,4 @@ _Пример1_
 matrix1 = [4,10,3]
 matrix2 = [2,14,3]
 compare_arrays(matrix1,matrix2)  # return [4],[14],[3]
+```
