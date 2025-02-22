@@ -117,3 +117,41 @@ matrix1 = [4,10,3]
 matrix2 = [2,14,3]
 compare_arrays(matrix1,matrix2)  # return [4],[14],[3]
 ```
+###### upper_triangle(matrix:list[list[int or float]]):
+функция которая выводит верхний треугольник матрицы
+_Пример1_
+```Python
+matrix = [1,2,3],[4,5,6],[7,8,9]
+upper_triangle(matrix)  # return 1 2 3
+                        #        5 6
+                        #        9
+```
+
+###### lower_triangle(matrix:list[list[int or float]]):
+функция которая выводит нижний треугольник матрицы
+_Пример1_
+```Python
+matrix = [1,2,3],[4,5,6],[7,8,9]
+lower_triangle(matrix)  # return 1 
+                        #        4 5 
+                        #        7 8 9
+```
+
+###### left_triangle(matrix:list[list[int or float]]):
+функция которая выводит левый треугольник матрицы
+_Пример1_
+```Python
+matrix = [1,2,3],[4,5,6],[7,8,9]
+left_triangle(matrix)  # return 1 
+                       #        4 5 
+                       #        7
+```
+
+###### top_triangle(matrix:list[list[int or float]]):
+функция которая выводит верхний треугольник матрицы
+_Пример1_
+```Python
+matrix = [1,2,3],[4,5,6],[7,8,9]
+top_triangle(matrix)  # return 1 2 3
+                      #        6        
+```
