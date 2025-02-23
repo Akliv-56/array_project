@@ -121,3 +121,6 @@ def compare_arrays(arr1:list[int],arr2:list[int]):
             bigger2 = f"{arr1[i]} < {arr2[i]}"
             arr1bigger.append(bigger2)
     return arr1bigger, arrequal, arr2bigger
+
+def list_maxpos(array:list[int or float]):
+    pass
