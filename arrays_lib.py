@@ -123,4 +123,17 @@ def compare_arrays(arr1:list[int],arr2:list[int]):
     return arr1bigger, arrequal, arr2bigger
 
 def list_maxpos(array:list[int or float]):
-    pass
+    #[1,2,3,4,5]
+    array_maxpos = []
+    max = 0
+    for i in range(0,len(array),1):
+        if array[i] > array[max]:
+            max = i
+    array_maxpos.append(max)
+    for i in range(0,len(array),1):
+        if array[i] == array[max]:
+            array_maxpos.append(i)
+    return array_maxpos
+
+        
+            
