@@ -1,13 +1,32 @@
 from logging import log_action
+def filter_even(arr):
+    print("Фильтрация четных эллементов массива",arr)
+    newarr =[]
+    for i in range(0,len(arr),1):
+        if arr[i]%2 == 0:
+            newarr.append(arr[i])
+    return newarr
+
+def filter_postive(matrix):
+    print("Фильтрация положительных чисел матрицы:",matrix)
+    newarr =[]
+    for i in range(0,len(matrix,1)):
+        for j in range(0,len(matrix[i])):
+            if matrix[i][j] >= 0:
+                newarr.append(matrix[i][j])
+    return newarr
+
 def sum_1d(array:list) -> int or float:
     message = f"вызвана функция sum_1d с параметрами:{array}"
     log_action(message)
     if not isinstance(array,list):
-        raise TypeError("Ожидает список для одноиерного массива")
+        raise TypeError("Ожидает список для одномерного массива")
     sum = 0
     for number in array:
         sum+=number
+    filter_even(array)
     return sum
+
 def prod_1d(array:list) -> int or float:
     message = f"вызвана функция prod_1d с параметрами:{array}"
     log_action(message)
@@ -16,6 +35,7 @@ def prod_1d(array:list) -> int or float:
     prod = 1
     for number in array:
         prod*= number
+    filter_even(array)
     return prod
 
 def mean_1d(array:list) -> int or float:
@@ -28,6 +48,7 @@ def mean_1d(array:list) -> int or float:
     for number in array:
         sum+=number
     avg = sum / len(array)
+    filter_even(array)
     return avg
 
 def max_1d(array:list) -> int or float:
@@ -39,6 +60,7 @@ def max_1d(array:list) -> int or float:
     for number in array:
         if number > max:
             max = number
+    filter_even(array)
     return max
 
 def min_1d(array:list) -> int or float:
@@ -50,6 +72,7 @@ def min_1d(array:list) -> int or float:
     for number in array:
         if number<min:
             min = number
+    filter_even(array)
     return min
 
 def sum_2d(array:list[list[int]]) -> int or float:
@@ -59,8 +82,9 @@ def sum_2d(array:list[list[int]]) -> int or float:
         raise TypeError("Ожидает список для двумерного массива")
     sum = 0
     for i in range(0,len(array),1):
-        for j in range(0,len(array),1):
+        for j in range(0,len(array[i]),1):
             sum+=array[i][j]
+    filter_postive(array)
     return sum
 
 def prod_2d(array:list) -> int or float:
@@ -70,8 +94,9 @@ def prod_2d(array:list) -> int or float:
         raise TypeError("Ожидает список для двумерного массива")
     prod = 1
     for i in range(0,len(array),1):
-        for j in range(0,len(array),1):
+        for j in range(0,len(array[i]),1):
             prod*= array[i][j]
+    filter_postive(array)
     return prod
 
 def mean_2d(array:list) -> int or float:
@@ -82,9 +107,10 @@ def mean_2d(array:list) -> int or float:
     sum = 0
     avg = 0
     for i in range(0,len(array),1):
-        for j in range(0,len(array),1):
+        for j in range(0,len(array[i]),1):
             sum+=array[i][j]
     avg = sum / len(array)
+    filter_postive(array)
     return avg
 
 def max_2d(array:list) -> int or float:
@@ -94,9 +120,10 @@ def max_2d(array:list) -> int or float:
         raise TypeError("Ожидает список для двумерного массива")
     max = array[0][0]
     for i in range(0,len(array),1):
-        for j in range(0,len(array),1):
+        for j in range(0,len(array[i]),1):
             if array[i][j] > max:
                 max = array[i][j]
+    filter_postive(array)
     return max
 
 def min_2d(array:list) -> int or float:
@@ -106,9 +133,10 @@ def min_2d(array:list) -> int or float:
         raise TypeError("Ожидает список для двумерного массива")
     min= array[0][0]
     for i in range(0,len(array),1):
-        for j in range(0,len(array),1):
+        for j in range(0,len(array[i]),1):
             if array[i][j] < min:
                 min = array[i][j]
+    filter_postive(array)
     return min
 
 def sum_arrays(arr1:list[int or float], arr2:list[int or float]):
