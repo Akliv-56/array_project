@@ -1,5 +1,6 @@
 from logging import log_action
 def sum_1d(array:list) -> int or float:
+    
     sum = 0
     for number in array:
         sum+=number
@@ -134,6 +135,7 @@ def list_maxpos(array:list[int or float]):
         if array[i] == array[max]:
             array_maxpos.append(i)
     return array_maxpos
+
 
         
             
