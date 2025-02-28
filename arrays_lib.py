@@ -7,7 +7,15 @@ def filter_even(arr):
             newarr.append(arr[i])
     return newarr
 
-def filter_postive(matrix):
+def filter_odd(arr):
+    print("Фильтрация нечетных эллементов массива",arr)
+    newarr =[]
+    for i in range(0,len(arr),1):
+        if arr[i]%2 != 0:
+            newarr.append(arr[i])
+    return newarr
+
+def filter_postive_matrix(matrix):
     print("Фильтрация положительных чисел матрицы:",matrix)
     newarr =[]
     for i in range(0,len(matrix,1)):
@@ -16,11 +24,20 @@ def filter_postive(matrix):
                 newarr.append(matrix[i][j])
     return newarr
 
+def filter_even_matrix(matrix):
+    print("Фильтрация четных эллементов матрицы",matrix)
+    newmat =[]
+    for i in range(0,len(matrix),1):
+        for j in range(0,len(matrix[i]),1):
+            if matrix[i][j]%2 == 0:
+                newmat.append(matrix[i])
+    return newmat
+
 def sum_1d(array:list) -> int or float:
-    message = f"вызвана функция sum_1d с параметрами:{array}"
-    log_action(message)
     if not isinstance(array,list):
         raise TypeError("Ожидает список для одномерного массива")
+    message = f"вызвана функция sum_1d с параметрами:{array}"
+    log_action(message)
     sum = 0
     for number in array:
         sum+=number
@@ -28,10 +45,10 @@ def sum_1d(array:list) -> int or float:
     return sum
 
 def prod_1d(array:list) -> int or float:
-    message = f"вызвана функция prod_1d с параметрами:{array}"
-    log_action(message)
     if not isinstance(array,list):
         raise TypeError("Ожидает список для одномерного массива")
+    message = f"вызвана функция prod_1d с параметрами:{array}"
+    log_action(message)
     prod = 1
     for number in array:
         prod*= number
@@ -39,10 +56,10 @@ def prod_1d(array:list) -> int or float:
     return prod
 
 def mean_1d(array:list) -> int or float:
-    message = f"вызвана функция mean_1d с параметрами:{array}"
-    log_action(message)
     if not isinstance(array,list):
         raise TypeError("Ожидает список для одномерного массива")
+    message = f"вызвана функция mean_1d с параметрами:{array}"
+    log_action(message)
     sum=0
     avg = 0
     for number in array:
@@ -52,10 +69,11 @@ def mean_1d(array:list) -> int or float:
     return avg
 
 def max_1d(array:list) -> int or float:
-    message = f"вызвана функция max_1d с параметрами:{array}"
-    log_action(message)
     if not isinstance(array,list):
         raise TypeError("Ожидает список для одномерного массива")
+    message = f"вызвана функция max_1d с параметрами:{array}"
+    log_action(message)
+    
     max = array[0]
     for number in array:
         if number > max:
@@ -64,10 +82,11 @@ def max_1d(array:list) -> int or float:
     return max
 
 def min_1d(array:list) -> int or float:
-    message = f"вызвана функция min_1d с параметрами:{array}"
-    log_action(message)
     if not isinstance(array,list):
         raise TypeError("Ожидает список для одномерного массива")
+    message = f"вызвана функция min_1d с параметрами:{array}"
+    log_action(message)
+    
     min= array[0]
     for number in array:
         if number<min:
@@ -76,10 +95,11 @@ def min_1d(array:list) -> int or float:
     return min
 
 def sum_2d(array:list[list[int]]) -> int or float:
+    if not isinstance(array,list[list]):
+        raise TypeError("Ожидает список для двумерной матрицы")
     message = f"вызвана функция sum_2d с параметрами:{array}"
     log_action(message)
-    if not isinstance(array,list):
-        raise TypeError("Ожидает список для двумерного массива")
+    
     sum = 0
     for i in range(0,len(array),1):
         for j in range(0,len(array[i]),1):
@@ -88,10 +108,10 @@ def sum_2d(array:list[list[int]]) -> int or float:
     return sum
 
 def prod_2d(array:list) -> int or float:
+    if not isinstance(array,list[list]):
+        raise TypeError("Ожидает список для двумерной матрицы")
     message = f"вызвана функция prod_2d с параметрами:{array}"
     log_action(message)
-    if not isinstance(array,list):
-        raise TypeError("Ожидает список для двумерного массива")
     prod = 1
     for i in range(0,len(array),1):
         for j in range(0,len(array[i]),1):
@@ -100,10 +120,10 @@ def prod_2d(array:list) -> int or float:
     return prod
 
 def mean_2d(array:list) -> int or float:
+    if not isinstance(array,list[list]):
+        raise TypeError("Ожидает список для двумерной матрицы")
     message = f"вызвана функция mean_2d с параметрами:{array}"
     log_action(message)
-    if not isinstance(array,list):
-        raise TypeError("Ожидает список для двумерного массива")
     sum = 0
     avg = 0
     for i in range(0,len(array),1):
@@ -114,10 +134,10 @@ def mean_2d(array:list) -> int or float:
     return avg
 
 def max_2d(array:list) -> int or float:
-    message = f"вызвана функция min_2d с параметрами:{array}"
+    if not isinstance(array,list[list]):
+        raise TypeError("Ожидает список для двумерной матрицы")
+    message = f"вызвана функция max_2d с параметрами:{array}"
     log_action(message)
-    if not isinstance(array,list):
-        raise TypeError("Ожидает список для двумерного массива")
     max = array[0][0]
     for i in range(0,len(array),1):
         for j in range(0,len(array[i]),1):
@@ -127,10 +147,10 @@ def max_2d(array:list) -> int or float:
     return max
 
 def min_2d(array:list) -> int or float:
-    message = "вызвана функция min_2d"
+    if not isinstance(array,list[list]):
+        raise TypeError("Ожидает список для двумерной матрицы")
+    message = f"вызвана функция min_2d c параметрами:{array}"
     log_action(message)
-    if not isinstance(array,list):
-        raise TypeError("Ожидает список для двумерного массива")
     min= array[0][0]
     for i in range(0,len(array),1):
         for j in range(0,len(array[i]),1):
